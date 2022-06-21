@@ -29,8 +29,8 @@ export default function Register() {
         <title>Register</title>
       </Head>
       <Navbar />
-      <div className={`${styles.card}`}>
-        <h2> Register </h2>
+      {/* <div className={`${styles.card}`}> */}
+      <div>
         <div className={`${styles.row}`}>
           <button onClick={patientForm}>Patient</button>
           <button onClick={doctorForm}>Doctor</button>
