@@ -119,19 +119,6 @@ export default function ReportForm() {
           placeholder="Patient ID"
           ref={patientsIDRef}
         />
-        <div className={styles.rowForm}>
-          <label htmlFor="dob">Updated on: </label>
-          <input type="date" id="dob" name="dob" ref={dobRef} />
-        </div>
-        <div className={styles.rowForm}>
-          <input
-            type="file"
-            id="report"
-            name="report"
-            accept=".pdf"
-            ref={fileRef}
-          />
-        </div>
         <textarea
           name="diagnosis"
           id="diagnosis"
@@ -148,6 +135,19 @@ export default function ReportForm() {
           placeholder="Prescription :"
           ref={prescriptionRef}
         ></textarea>
+        <div className={styles.rowForm}>
+          <label htmlFor="dob">Report Updated on: </label>
+          <input type="date" id="dob" name="dob" ref={dobRef} />
+        </div>
+        <div className={styles.rowForm}>
+          <input
+            type="file"
+            id="report"
+            name="report"
+            accept=".pdf"
+            ref={fileRef}
+          />
+        </div>
         <button type="submit" className={styles.btn}>
           Submit
         </button>

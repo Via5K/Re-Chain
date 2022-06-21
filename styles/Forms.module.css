@@ -6,11 +6,11 @@
   justify-content: space-evenly;
   align-items: center;
   margin: 1.5rem auto;
-  background-color: var(--bg);
+  /* background-color: rgba(0, 0, 0, 0.05); */
   color: var(--font);
   padding: 0.5rem 1rem;
-  box-shadow: 0px 1px 14px 1px #aaa;
-  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem;
 }
 
 .rowForm {
@@ -27,17 +27,20 @@
 
 .btn {
   width: fit-content;
-  border-radius: 30px;
-  background-color: var(--bg);
+  border-radius: 3px;
+  background: var(--bg);
   color: var(--font);
-  border: 2px inset;
-  padding: 2px 16px;
+  border: 2px;
+  padding: 5px 20px;
   font-size: 1.05rem;
+  margin: 1rem auto;
+  box-shadow: inset 0px 0px 20px 1px #cbd2ff;
 }
 .btn:hover {
   font-weight: bold;
-  color: red;
-  border: 2px outset;
+  color: var(--hover);
+  border: 2px;
+  box-shadow: 0px 0px 20px 1px #cbd2ff;
 }
 
 .state {

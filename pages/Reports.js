@@ -30,8 +30,7 @@ export default function Reports() {
 
       <Navbar />
 
-      <div className={`${styles.card}`}>
-        <h2>Report</h2>
+      <div>
         <div className={`${styles.row}`}>
           <button onClick={AddForm}>Add Report</button>
           <button onClick={GetForm}>Get Report</button>

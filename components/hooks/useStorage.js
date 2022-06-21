@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Web3Storage } from 'web3.storage';
 
 const API_TOKEN =
-  process.env.API_TOKEN ||
+  process.env.WEB3_STORAGE_TOKEN ||
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGQ5RDY2MUNkRjQwZWRiNTdCYzJEZTlGRTg3YTVCZjk3NmZhQzQ4YzEiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDgyNzQ2MDg4NzEsIm5hbWUiOiJEb2N0b3IifQ.lLx1al8hirsVcjTg9D-_LrWr2Fxjw_h-L5HvtihXdJs';
 
 const useStorage = () => {
@@ -10,7 +10,7 @@ const useStorage = () => {
 
   const uploadFile = async (fileInput) => {
     // Construct with token and endpoint
-    const client = new Web3Storage({ token: API_TOKEN });
+    const client = new Web3Storage({ token: WEB3_STORAGE_TOKEN });
 
     // const fileInput = document.querySelector('input[type="file"]');
     // const fileInput = fileRef.current;

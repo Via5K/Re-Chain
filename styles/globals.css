@@ -1,9 +1,16 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700,800,900&display=swap');
 :root {
-  --bg: black;
-  --font: white;
-  --hover: red;
+  --bg: rgba(0, 0, 0, 0.1);
+  /* radial-gradient(
+    circle,
+    rgba(15, 152, 221, 1) 30%,
+    rgba(19, 181, 210, 1) 68%,
+    rgba(23, 205, 221, 1) 91%
+  ); */
+  --font: black;
+  --hover: rgb(0, 0, 102);
+  --shadow: 0px 6px 14px 1px #cbd2ff;
 }
 
 html,
@@ -16,7 +23,13 @@ body {
   font-size: 1.1rem;
   /* --bg: black;
   --font: white; */
-  background-color: var(--bg);
+  /* background: var(--bg); */
+  background: radial-gradient(
+    circle,
+    rgba(15, 152, 221, 1) 30%,
+    rgba(19, 181, 210, 1) 68%,
+    rgba(23, 205, 221, 1) 91%
+  );
   color: var(--font);
   padding-bottom: 0.5rem;
   min-height: 100vh;
@@ -96,6 +109,7 @@ body {
 .navbar a:hover {
   color: var(--hover);
   cursor: pointer;
+  font-weight: bolder;
 }
 
 @media (max-width: 768px) {
@@ -221,7 +235,7 @@ body {
 .label {
   width: 50px;
   height: 26px;
-  background-color: var(--bg);
+  background: var(--bg);
   display: flex;
   border-radius: 8px;
   align-items: center;
@@ -234,7 +248,7 @@ body {
 .ball {
   width: 24px;
   height: 22px;
-  background-color: var(--font);
+  background: var(--font);
   position: absolute;
   top: 2px;
   left: 2px;
@@ -266,28 +280,31 @@ input,
 textarea {
   width: 100%;
   color: var(--font);
-  background-color: var(--bg);
-  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0px 0px 20px 3px #9d9aff;
+  border-radius: 5px;
   font-size: 1.1rem;
   padding: 3px 8px;
   margin: 1rem 1rem 2.5rem 1rem;
+  /* border: inset; */
 }
 
 button {
   width: fit-content;
-  border-radius: 30px;
-  background-color: var(--bg);
+  border-radius: 3px;
+  background: var(--bg);
   color: var(--font);
-  border: 2px inset;
-  padding: 2px 16px;
+  border: 2px;
+  padding: 5px 20px;
   font-size: 1.05rem;
   margin: 1rem auto;
+  box-shadow: inset 0px 0px 20px 1px #cbd2ff;
 }
 button:hover {
   font-weight: bold;
   color: var(--hover);
-  border: 2px outset;
-  /* box-shadow: inset 0px 1px 14px 1px #aaa; */
+  border: 2px;
+  box-shadow: 0px 0px 20px 1px #cbd2ff;
 }
 /* Form Ended */
 
