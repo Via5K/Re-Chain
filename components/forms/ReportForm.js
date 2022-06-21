@@ -33,7 +33,7 @@ export default function ReportForm() {
     e.preventDefault();
 
     let valid = true;
-    let msg = 'Invalid Input: Please enter valid input values ⁉️  ';
+    let msg = '';
     let data = { ...Data };
 
     if (validateID(patientsIDRef.current.value.trim()))
@@ -105,20 +105,27 @@ export default function ReportForm() {
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
+        <label htmlFor="id">Doctor's ID: </label>
         <input
           type="text"
           name="doctor"
+          id="doctor"
           className="doctor"
           placeholder="Doctor's ID"
           ref={doctorsIDRef}
         />
+
+        <label htmlFor="patient-id">Doctor's ID: </label>
         <input
           type="text"
           name="patient-id"
+          id="patient-id"
           className="patient-id"
           placeholder="Patient ID"
           ref={patientsIDRef}
         />
+
+        <label htmlFor="diagnosis">Diagnosis: </label>
         <textarea
           name="diagnosis"
           id="diagnosis"
@@ -127,6 +134,8 @@ export default function ReportForm() {
           placeholder="Diagnosis :"
           ref={diagnosisRef}
         ></textarea>
+
+        <label htmlFor="prescription">Prescription: </label>
         <textarea
           name="prescription"
           id="prescription"

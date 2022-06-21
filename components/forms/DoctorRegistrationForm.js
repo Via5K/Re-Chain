@@ -77,36 +77,48 @@ export default function RegistrationForm() {
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
+        <label htmlFor="doctor">Doctor's Name: </label>
         <input
           type="text"
           name="doctor"
+          id="doctor"
           className="doctor"
           placeholder="Doctor's Name"
           ref={doctorsNameRef}
         />
+
+        <label htmlFor="speciality">Speciality: </label>
         <input
           type="text"
           name="speciality"
+          id="speciality"
           className="speciality"
           placeholder="Speciality"
           ref={specialityRef}
         />
+
         <div className={styles.rowForm} onChange={setGender}>
           <label htmlFor="male">Male</label>
           <input type="radio" id="male" name="gender" value="Male" selected />
           <label htmlFor="female">Female</label>
           <input type="radio" id="female" name="gender" value="Female" />
         </div>
+
+        <label htmlFor="number">Number: </label>
         <input
           type="tel"
           name="doctors-id"
+          id="number"
           className="doctors-id"
-          placeholder="Doctor's ID"
+          placeholder="Doctor's Number"
           ref={doctorsIDRef}
         />
+
+        <label htmlFor="Hospital">Hospital: </label>
         <input
           type="text"
           name="hospital"
+          id="hospital"
           className="hospital"
           placeholder="Hospital"
           ref={hospitalRef}

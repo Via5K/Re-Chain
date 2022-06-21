@@ -53,12 +53,20 @@ export default function DoctorsForm() {
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <input type="text" placeholder="Doctor's ID" ref={IDRef} required />
+        <label htmlFor="id">Doctor's ID: </label>
+        <input
+          type="text"
+          id="id"
+          placeholder="Doctor's ID"
+          ref={IDRef}
+          required
+        />
         {/* <input type="text" placeholder="Patient's ID" /> */}
         <button type="submit" className={styles.btn}>
           Submit
         </button>
       </form>
+
       <DoctorsData Doctor={Doctor} />
 
       <section>

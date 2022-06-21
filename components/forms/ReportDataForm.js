@@ -105,7 +105,14 @@ export default function ReportDataForm() {
   return (
     <>
       <form className={styles.form} onSubmit={handleReport}>
-        <input type="text" placeholder="Patient ID" ref={IDRef} required />
+        <label htmlFor="id">Patient's ID: </label>
+        <input
+          type="text"
+          placeholder="Patient ID"
+          id="id"
+          ref={IDRef}
+          required
+        />
         <button className={styles.btn} type="submit">
           Submit
         </button>
