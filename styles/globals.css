@@ -102,7 +102,8 @@ body {
 .navbar a {
   color: var(--font);
   text-decoration: none;
-  font-weight: 900;
+  font-weight: bolder;
+  opacity: 11;
   transition: color 0.3s ease-in-out;
 }
 
@@ -177,16 +178,17 @@ body {
 
   .navbar .menu-items {
     padding-top: 100px;
-    background: var(--bg);
+    background: rgba(0, 17, 255, 0.2);
     height: 100vh;
-    max-width: 300px;
+    max-width: 220px;
     transform: translate(-150%);
     display: flex;
     flex-direction: column;
     margin-left: -40px;
     padding-left: 40px;
     transition: transform 0.5s ease-in-out;
-    box-shadow: 5px 0px 10px 0px #aaa;
+    box-shadow: inset 20px -20px 20px 20px rgba(17, 0, 168, 0.411);
+    /* opacity: 0.5; */
     overflow: auto;
   }
 
