@@ -5,6 +5,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--bg);
+  /* background: var(--bg); */
   color: var(--font);
 }

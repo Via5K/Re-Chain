@@ -51,11 +51,6 @@ export default function Navbar() {
           </div>
           <ul className="menu-items">
             <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
               <Link href="/Patients">
                 <a>Patients</a>
               </Link>
@@ -75,29 +70,10 @@ export default function Navbar() {
                 <a>Register</a>
               </Link>
             </li>
-            <li>
-              {/* <a alt="Change Theme" onClick={() => changeTheme()}>
-              Theme
-            </a> */}
-              <div>
-                <input
-                  ref={checked}
-                  type="checkbox"
-                  className="checkbox"
-                  id="checkbox"
-                  onClick={() => changeTheme()}
-                />
-                <label htmlFor="checkbox" className="label">
-                  <i className="fas fa-sun"></i>
-                  <i className="fas fa-moon"></i>
-                  <div className="ball"></div>
-                </label>
-              </div>
-            </li>
           </ul>
           <h1 className="logo">
-            <Link href="/random">
-              <a>Medikeeper</a>
+            <Link href="/">
+              <a>Re-Chain</a>
             </Link>
           </h1>
         </div>
@@ -107,3 +83,23 @@ export default function Navbar() {
     </>
   );
 }
+
+// <li>
+//   {/* <a alt="Change Theme" onClick={() => changeTheme()}>
+//   Theme
+// </a> */}
+//   <div>
+//     <input
+//       ref={checked}
+//       type="checkbox"
+//       className="checkbox"
+//       id="checkbox"
+//       onClick={() => changeTheme()}
+//     />
+//     <label htmlFor="checkbox" className="label">
+//       <i className="fas fa-sun"></i>
+//       <i className="fas fa-moon"></i>
+//       <div className="ball"></div>
+//     </label>
+//   </div>
+// </li>

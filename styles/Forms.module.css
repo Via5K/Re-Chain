@@ -6,11 +6,11 @@
   justify-content: space-evenly;
   align-items: center;
   margin: 1.5rem auto;
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--font);
   padding: 0.5rem 1rem;
-  box-shadow: 0px 1px 14px 1px #aaa;
-  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem;
 }
 
 .rowForm {
@@ -28,7 +28,7 @@
 .btn {
   width: fit-content;
   border-radius: 30px;
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--font);
   border: 2px inset;
   padding: 2px 16px;
