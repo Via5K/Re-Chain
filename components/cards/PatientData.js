@@ -4,7 +4,6 @@ const PatientData = ({ Patient }) => {
   return (
     <>
       <div className={styles.card}>
-        <h2>Patient Data</h2>
         <br />
         <h3>Name: {Patient.patientsName}</h3>
         <h3>Phone: {Patient.number}</h3>

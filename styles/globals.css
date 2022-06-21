@@ -102,7 +102,8 @@ body {
 .navbar a {
   color: var(--font);
   text-decoration: none;
-  font-weight: 900;
+  font-weight: bolder;
+  opacity: 11;
   transition: color 0.3s ease-in-out;
 }
 
@@ -177,16 +178,17 @@ body {
 
   .navbar .menu-items {
     padding-top: 100px;
-    background: var(--bg);
+    background: rgba(0, 17, 255, 0.2);
     height: 100vh;
-    max-width: 300px;
+    max-width: 220px;
     transform: translate(-150%);
     display: flex;
     flex-direction: column;
     margin-left: -40px;
     padding-left: 40px;
     transition: transform 0.5s ease-in-out;
-    box-shadow: 5px 0px 10px 0px #aaa;
+    box-shadow: inset 20px -20px 20px 20px rgba(17, 0, 168, 0.411);
+    /* opacity: 0.5; */
     overflow: auto;
   }
 
@@ -289,6 +291,15 @@ textarea {
   /* border: inset; */
 }
 
+label {
+  width: 100%;
+  font-size: 1.4 rem;
+  font-weight: bolder;
+  text-align: left;
+  padding-left: 9px;
+  margin-top: 1rem;
+}
+
 button {
   width: fit-content;
   border-radius: 3px;
@@ -309,7 +320,7 @@ button:hover {
 /* Form Ended */
 
 /* Scrollbar */
-*::-webkit-scrollbar-track {
+/* *::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
   background-color: #ffffff;
   border-radius: 0.5rem;
@@ -318,7 +329,6 @@ button:hover {
 *::-webkit-scrollbar {
   width: 11px;
   height: 11px;
-  /* background-color: #f5f5f5; */
 }
 
 *::-webkit-scrollbar-thumb {
@@ -332,5 +342,28 @@ button:hover {
     transparent
   );
   border-radius: 1rem;
+} */
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(96, 143, 236)),
+    color-stop(0.72, rgb(93, 113, 138)),
+    color-stop(0.86, rgb(123, 150, 230))
+  );
 }
 /* Scrollbar End */

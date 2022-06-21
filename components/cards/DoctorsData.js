@@ -12,7 +12,6 @@ const DoctorsData = ({ Doctor }) => {
     return (
       <>
         <div className={styles.card}>
-          <h2>Doctors Data</h2>
           <br />
           <h3>Name: {Doctor.doctorsName}</h3>
           <h3>Speciality: {Doctor.speciality}</h3>

@@ -60,14 +60,16 @@ export default function PatientRegistrationForm() {
 
     let allergies = allergiesRef.current.value.replace(/\s+/g, ' ').trim(); // remove all extra spaces
     data.allergies = allergies;
+
     // let allergies = allergiesRef.current.value.replace(/\s+/g, '').trim(); // remove all spaces
-    // if (allergies.length > 3) { 
+    // if (allergies.length > 3) {
     //   allergies = allergies.split(',');
     //   let temp = data.allergies.concat(allergies);
     //   allergies = [...new Set([...data.allergies, ...allergies])];
     //   data.allergies = [...allergies];
     //   console.log(allergies);
     // }
+
     data.dob = String(dobRef.current.value);
     data.gender = gender;
     await setData(data);
@@ -92,30 +94,39 @@ export default function PatientRegistrationForm() {
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
+        <label htmlFor="patient-name">Patient's Name: </label>
         <input
           type="text"
           name="patient-name"
+          id="patient-name"
           className="patient-name"
           placeholder="Patient's Name"
           ref={patientsNameRef}
         />
+
+        <label htmlFor="phone-number">Number: </label>
         <input
           type="tel"
           name="phone-number"
+          id="phone-number"
           className="phone-number"
           placeholder="Phone Number"
           ref={patientsIDRef}
         />
+
         <div className={styles.rowForm}>
           <label htmlFor="dob">Date of Birth:</label>
           <input type="date" id="dob" name="dob" ref={dobRef} />
         </div>
+
         <div className={styles.rowForm} onChange={setGender}>
           <label htmlFor="male">Male</label>
           <input type="radio" id="male" name="gender" value="Male" checked />
           <label htmlFor="female">Female</label>
           <input type="radio" id="female" name="gender" value="Female" />
         </div>
+
+        <label htmlFor="patients-address">Address: </label>
         <textarea
           name="patients-address"
           id="patients-address"
@@ -124,6 +135,8 @@ export default function PatientRegistrationForm() {
           placeholder="Address"
           ref={addressRef}
         ></textarea>
+
+        <label htmlFor="allergies">Allergies: </label>
         <textarea
           name="allergies"
           id="allergies"
