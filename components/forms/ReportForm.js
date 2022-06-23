@@ -115,7 +115,7 @@ export default function ReportForm() {
           ref={doctorsIDRef}
         />
 
-        <label htmlFor="patient-id">Doctor's ID: </label>
+        <label htmlFor="patient-id">Patient's ID: </label>
         <input
           type="text"
           name="patient-id"

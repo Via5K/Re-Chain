@@ -11,6 +11,7 @@ export default function ReportDataForm() {
   const [ID, setID] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [Message, setMessage] = useState('Something went wrong ⁉️ ');
+  let msg;
 
   const [Patient, setPatient] = useState({
     patientsID: '',
@@ -60,11 +61,19 @@ export default function ReportDataForm() {
     data.dob = result[4];
     let allergies = result[5];
 
+    if (data.patientsName == '' || data.patientsName == undefined) {
+      msg = `No patient with id ${IDRef.current.value}`;
+      await setMessage(msg);
+      await setShowModal(true);
+      return false;
+    }
+
     for (let i = 11; i < allergies.length; i++) {
       data.allergies += allergies[i];
     }
 
     await setPatient(data);
+    return true;
   };
 
   const getDoctorData = async (id) => {
@@ -89,6 +98,10 @@ export default function ReportDataForm() {
       return;
     }
     const data = { ...Reports };
+    const patient = await getPatientData();
+
+    if (patient == false) return;
+
     const result = await getReport(IDRef.current.value);
     data.lastUpdated = result[0];
     data.currentMedicalDosage = result[1];
@@ -96,9 +109,19 @@ export default function ReportDataForm() {
     data.diagnosis = result[3];
     data.pdf = result[4];
     data.pdfAll = result[5];
+    if (
+      data.pdf == '' ||
+      data.pdf == undefined ||
+      data.updatedBy == '' ||
+      data.updatedBy == undefined
+    ) {
+      msg = `No report uploaded for patient ${Patient.patientsName} with id: ${IDRef.current.value}⁉️`;
+      await setMessage(msg);
+      await setShowModal(true);
+      return;
+    }
     await setReports(data);
 
-    await getPatientData();
     await getDoctorData(data.updatedBy);
   };
 
@@ -121,6 +144,15 @@ export default function ReportDataForm() {
       <DoctorsData Doctor={Doctor} />
       <PatientData Patient={Patient} />
       <Report Data={Reports} />
+
+      <section>
+        {/* <button onClick={() => setShowModal(true)}>Open Modal</button> */}
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)} show={showModal}>
+            {Message}
+          </Modal>
+        )}
+      </section>
     </>
   );
 }

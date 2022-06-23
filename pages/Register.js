@@ -24,7 +24,7 @@ export default function Register() {
   const doctorForm = () => setForm(false);
 
   return (
-    <>
+    <> 
       <Head>
         <title>Register</title>
       </Head>

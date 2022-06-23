@@ -31,7 +31,10 @@ export default function Reports() {
       <Navbar />
 
       <div>
-        <div className={`${styles.row}`}>
+        <div
+          className={`${styles.row}`}
+          style={{ maxWidth: '750px', margin: '0 auto' }}
+        >
           <button onClick={AddForm}>Add Report</button>
           <button onClick={GetForm}>Get Report</button>
         </div>

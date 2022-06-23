@@ -70,8 +70,14 @@ const Modal = ({ onClose, children, title }) => {
     `;
 
   const StyledModal = styled.div`
-    background: ${Theme.bg};
-    height:100%;
+    background: radial-gradient(
+      circle,
+      rgba(15, 152, 221, 1) 30%,
+      rgba(19, 181, 210, 1) 68%,
+      rgba(23, 205, 221, 1) 91%
+    );
+    background-color: rgba(0,0,0,0.1);
+    min-height:40%;
     width:100%;
     border-radius: 1rem;
     padding: 15px;
@@ -103,7 +109,7 @@ const Modal = ({ onClose, children, title }) => {
               onClick={handleCloseClick}
               style={{ textDecoration: 'none' }}
             >
-              ❌
+              🆗
             </a>
           </StyledModalHeader>
           {title && <StyledModalTitle>{title}</StyledModalTitle>}

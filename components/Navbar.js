@@ -65,11 +65,11 @@ export default function Navbar() {
                 <a>Reports</a>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/Register">
                 <a>Register</a>
               </Link>
-            </li>
+            </li> */}
           </ul>
           <h1 className="logo">
             <Link href="/">
