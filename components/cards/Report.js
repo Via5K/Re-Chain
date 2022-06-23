@@ -12,7 +12,7 @@ const Report = ({ Data }) => {
         <h3>Diagnosis: {Data.diagnosis}</h3>
         {/* <h3>: {Data.pdf}</h3> */}
         <h3>
-          File: <a href={Data.pdf}>View Report</a>
+          Report: <a href={Data.pdf}>View Report</a>
         </h3>
       </div>
     </>

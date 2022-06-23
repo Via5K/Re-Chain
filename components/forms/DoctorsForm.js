@@ -7,7 +7,7 @@ import Modal from '../cards/Modal';
 
 export default function DoctorsForm() {
   const [showModal, setShowModal] = useState(false);
-  const [Message, setMessage] = useState('Something went wrong ⁉️ ');
+  const [Message, setMessage] = useState('Something went wrong!');
   const [ID, setID] = useState('');
   const [Doctor, setDoctor] = useState({
     doctorsID: '',
@@ -27,7 +27,7 @@ export default function DoctorsForm() {
     e.preventDefault();
 
     let valid = true;
-    let msg = 'Invalid Input: Please enter valid input values ⁉️  ';
+    let msg = 'Invalid Input: ';
     if (!validateID(IDRef.current.value.trim())) {
       valid = false;
       msg = msg + "  Invalid Doctor's ID  |";
@@ -46,6 +46,14 @@ export default function DoctorsForm() {
     doctor.speciality = resData[1];
     doctor.hospital = resData[2];
     doctor.gender = resData[3];
+
+    if (doctor.doctorsName == '' || doctor.doctorsName == undefined) {
+      msg = `No Doctor with id ${IDRef.current.value}`;
+      await setMessage(msg);
+      await setShowModal(true);
+      return;
+    }
+
     await setDoctor(doctor);
     return true;
   };

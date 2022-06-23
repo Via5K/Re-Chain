@@ -1,21 +1,24 @@
+import styles from '../../styles/cards.module.css';
+
 export default function Welcome() {
   return (
     <>
-      <h1>Welcome to Medikeeper</h1>
-      <h3>Blockchain based medical record storage</h3>
-      <div>
-        <h5>
-          Too often our health must take the back seat for what really is
-          important,
-        </h5>
-        <h5>
-          it is only when you lose your health that you realise how important it
-          is.
-        </h5>
-        <h5>
-          We are in the business of getting people's health back and teaching
-          them how to stay healthy.
-        </h5>
+      <div className={styles.card}>
+        <h1 className={styles.head}>Re-Chain</h1>
+        <br />
+        <p>
+          Is a decentralised medical record storage system which used the
+          secureity of Blockchain and deployed on Ethereum Blockchain. Many A
+          times, Medical Records get misplaced, Although they are very
+          important. So, Re-chain is one stop solutions to all hassle for
+          keeping safe your Medical Records.
+        </p>
+        <br />
+        <p>
+          To Know How to Use It:
+          <a href="https://github.com/Via5k/Re-Chain">Click Here</a>
+        </p>
+        <br />
       </div>
     </>
   );

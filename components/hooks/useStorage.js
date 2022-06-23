@@ -3,14 +3,14 @@ import { Web3Storage } from 'web3.storage';
 
 const API_TOKEN =
   process.env.WEB3_STORAGE_TOKEN ||
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGQ5RDY2MUNkRjQwZWRiNTdCYzJEZTlGRTg3YTVCZjk3NmZhQzQ4YzEiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDgyNzQ2MDg4NzEsIm5hbWUiOiJEb2N0b3IifQ.lLx1al8hirsVcjTg9D-_LrWr2Fxjw_h-L5HvtihXdJs';
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDNmNTA4QTc5NjNGRDQ1RWM2ZDg3MmY0RTMwZDk0RjQwOGRjMmI5OTAiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NTU4MDAyMjQ5MDgsIm5hbWUiOiJSZS1DaGFpbiJ9.xxXz0Ieoq3E9AT4Ats6LmyXqUXcDYHvGBKS1181mpUY';
 
 const useStorage = () => {
   const [CID, setCID] = useState('');
 
   const uploadFile = async (fileInput) => {
     // Construct with token and endpoint
-    const client = new Web3Storage({ token: WEB3_STORAGE_TOKEN });
+    const client = new Web3Storage({ token: API_TOKEN });
 
     // const fileInput = document.querySelector('input[type="file"]');
     // const fileInput = fileRef.current;
