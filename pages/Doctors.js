@@ -33,8 +33,8 @@ export default function Doctors() {
           className={`${styles.row}`}
           style={{ maxWidth: '750px', margin: '0 auto' }}
         >
-          <button onClick={getForm}>View Details</button>
-          <button onClick={addForm}>Register</button>
+          <button onClick={getForm}>Lookup Doctor</button>
+          <button onClick={addForm}>Add Doctor</button>
         </div>
       </div>
       {getItem('address') ? (

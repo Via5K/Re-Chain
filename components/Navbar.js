@@ -65,6 +65,11 @@ export default function Navbar() {
                 <a>Reports</a>
               </Link>
             </li>
+            <li>
+              <a href="https://github.com/Via5k/re-chain/blob/master/README.md">
+                Docs
+              </a>
+            </li>
             {/* <li>
               <Link href="/Register">
                 <a>Register</a>

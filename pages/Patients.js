@@ -34,8 +34,8 @@ export default function Reports() {
           className={`${styles.row}`}
           style={{ maxWidth: '750px', margin: '0 auto' }}
         >
-          <button onClick={getForm}>View Details</button>
-          <button onClick={addForm}>Register</button>
+          <button onClick={getForm}>Lookup Patient</button>
+          <button onClick={addForm}>Add Patient</button>
         </div>
       </div>
       {getItem('address') ? (

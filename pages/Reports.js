@@ -36,7 +36,7 @@ export default function Reports() {
           style={{ maxWidth: '750px', margin: '0 auto' }}
         >
           <button onClick={AddForm}>Add Report</button>
-          <button onClick={GetForm}>Get Report</button>
+          <button onClick={GetForm}>Lookup Report</button>
         </div>
       </div>
 

@@ -113,7 +113,7 @@ export default function PatientRegistrationForm() {
           required
         />
 
-        <label htmlFor="phone-number">Number: </label>
+        <label htmlFor="phone-number">Phone Number: </label>
         <input
           type="tel"
           name="phone-number"
