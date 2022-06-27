@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { validateID } from './validations.js';
 import styles from '../../styles/Forms.module.css';
+import Card from '../../styles/cards.module.css';
 import PatientData from '../cards/PatientData.js';
 import DoctorsData from '../cards/DoctorsData.js';
 import Report from '../cards/Report.js';
@@ -103,6 +104,7 @@ export default function ReportDataForm() {
     if (patient == false) return;
 
     const result = await getReport(IDRef.current.value);
+    data.patientsID = IDRef.current.value;
     data.lastUpdated = result[0];
     data.currentMedicalDosage = result[1];
     data.updatedBy = result[2];
@@ -141,8 +143,22 @@ export default function ReportDataForm() {
         </button>
       </form>
 
+      <br />
+      <div className={Card.card}>
+        <h2 className={Card.head}>Doctor</h2>
+      </div>
       <DoctorsData Doctor={Doctor} />
+
+      <br />
+      <div className={Card.card}>
+        <h2 className={Card.head}>Patient</h2>
+      </div>
       <PatientData Patient={Patient} />
+
+      <br />
+      <div className={Card.card}>
+        <h2 className={Card.head}>Report</h2>
+      </div>
       <Report Data={Reports} />
 
       <section>

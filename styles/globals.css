@@ -73,7 +73,7 @@ body {
   width: 100%;
   background: var(--bg);
   color: var(--font);
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 100;
 }
 
@@ -115,7 +115,7 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    opacity: 0.77;
+    opacity: 0.99;
   }
 
   .navbar-container input[type='checkbox'],
@@ -187,7 +187,7 @@ body {
     margin-left: -40px;
     padding-left: 40px;
     transition: transform 0.5s ease-in-out;
-    box-shadow: inset 20px -20px 20px 20px rgba(17, 0, 168, 0.411);
+    box-shadow: inset 20px -20px 20px 20px rgba(17, 0, 168, 0.7);
     /* opacity: 0.5; */
     overflow: auto;
   }
@@ -198,11 +198,26 @@ body {
     font-weight: 500;
   }
 
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    opacity: 11;
+    transition: color 0.3s ease-in-out;
+    padding: 0 4px;
+    border-radius: 0.5rem;
+    box-shadow: inset 0px -4px 5px 2px blue;
+  }
+
   .logo {
     position: absolute;
     top: 12px;
     right: 15px;
     font-size: 1.7rem;
+  }
+  .logo a {
+    box-shadow: none;
+    color: black;
   }
 
   .navbar-container input[type='checkbox']:checked ~ .menu-items {
