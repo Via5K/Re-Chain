@@ -215,6 +215,10 @@ body {
     right: 15px;
     font-size: 1.7rem;
   }
+  .logo a {
+    box-shadow: none;
+    color: black;
+  }
 
   .navbar-container input[type='checkbox']:checked ~ .menu-items {
     transform: translateX(0);
