@@ -40,7 +40,3 @@ Well, Doctor and Patient ID's are same as their phone number.
 
 Reports are uploaded to IPFS (decentralized File Sharing Platform).
 _Note:_ Reports can be uploaded as PDF only.
-
-### What if i want to view Previous Report.
-
-in order to view previous report, copy the Id of the report given to you and then (https://ID_HERE.ipfs.dweb.link/) replace the ID_HERE with the ID you copied.
