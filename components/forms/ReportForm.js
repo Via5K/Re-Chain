@@ -99,13 +99,22 @@ export default function ReportForm() {
     await setMessage(`Data uploaded on Ethereum Blockchain`);
     setShowModal(false);
 
+    // Success Message modal popup
+    msg = `Data Transaction Successful`;
+    await setMessage(msg);
+    await setShowModal(true);
+    setTimeout(() => {
+      msg = 'Invalid Input: Please enter valid input values ⁉️  ';
+      setShowModal(false);
+      setMessage(msg);
+    }, 5000);
     return true;
   };
 
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <label htmlFor="id">Doctor's ID: </label>
+        <label htmlFor="id">Doctor ID: </label>
         <input
           type="text"
           name="doctor"
@@ -115,7 +124,7 @@ export default function ReportForm() {
           ref={doctorsIDRef}
         />
 
-        <label htmlFor="patient-id">Patient's ID: </label>
+        <label htmlFor="patient-id">Patient ID: </label>
         <input
           type="text"
           name="patient-id"
@@ -166,7 +175,6 @@ export default function ReportForm() {
         </div> */}
       </form>
       <section>
-        {/* <button onClick={() => setShowModal(true)}>Open Modal</button> */}
         {showModal && (
           <Modal onClose={() => setShowModal(false)} show={showModal}>
             {Message}

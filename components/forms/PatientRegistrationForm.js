@@ -91,6 +91,15 @@ export default function PatientRegistrationForm() {
 
     await addPatient(data);
 
+    // Success Message modal popup
+    msg = `Data Transaction Successful`;
+    await setMessage(msg);
+    await setShowModal(true);
+    setTimeout(() => {
+      msg = 'Invalid Input: Please enter valid input values ⁉️  ';
+      setShowModal(false);
+      setMessage(msg);
+    }, 5000);
     return true;
   };
 
