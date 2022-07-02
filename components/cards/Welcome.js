@@ -25,29 +25,26 @@ export default function Welcome() {
         </p>
         <br />
         <br />
-        <div className={styles.head}>
+        <div
+          className={styles.head}
+          style={{
+            width: '50%',
+            height: '100%',
+            minWidth: '200px',
+            maxHeight: '70px',
+            margin: '0 auto',
+            cursor: 'help',
+          }}
+        >
           <Image
             loader={myLoader}
             src="https://o.remove.bg/downloads/e21c7a5c-a4ea-43da-a4b9-102061054e95/Square-Brackets_-Curly-Brackets_-Angle-Brackets_-Oh-My-1_720x370-removebg-preview.png"
             alt="Directions of use"
             width={120}
             height={80}
+            onClick={() => setShowModal(true)}
           />
         </div>
-        <iframe
-          height="300px"
-          width={'100%'}
-          src="https://b.0-0.plus/blog/md.htm?src=https://raw.githubusercontent.com/Via5K/Re-Chain/master/README.md"
-          frameborder="0"
-        ></iframe>
-        <br />
-        <iframe
-          height="300px"
-          width={'100%'}
-          src="https://b.0-0.plus/blog/md.htm?src=https://raw.githubusercontent.com/Via5K/Blockchain-Based-Medical-Health-Records/master/README.md"
-          frameborder="0"
-        ></iframe>
-        <br />
       </div>
       <section>
         {showModal && (
@@ -62,15 +59,6 @@ export default function Welcome() {
                     src="https://b.0-0.plus/blog/md.htm?src=https://raw.githubusercontent.com/Via5K/Re-Chain/master/README.md"
                     frameborder="0"
                   ></iframe>
-                  <iframe
-                    height="300px"
-                    width={'100%'}
-                    src="https://b.0-0.plus/blog/md.htm?src=https://raw.githubusercontent.com/Via5K/Blockchain-Based-Medical-Health-Records/master/README.md"
-                    frameborder="0"
-                  ></iframe>
-                  <a href="https://github.com/Via5k/Re-Chain/blob/master/README.md">
-                    Click Here
-                  </a>{' '}
                   <br />
                   To Know About Contracts:
                   <a href="https://github.com/Via5K/Blockchain-Based-Medical-Health-Records/blob/master/README.md">
