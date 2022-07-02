@@ -73,7 +73,7 @@ const Admin = () => {
   }
 
   //remove Authentication, Remove from post of Doctor.
-  async function removeAuthentication(doctorAddress) {
+  async function removeAuthentication(removeAddressDoctor) {
     load();
     const account = await getCurrentAccount();
 
