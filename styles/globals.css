@@ -306,6 +306,24 @@ textarea {
   /* border: inset; */
 }
 
+input[type='radio'] {
+  color: rgb(0, 0, 0);
+  background-color: black;
+  /* filter: grayscale(100%) contrast(200%); */
+  /* accent-color: black; */
+  box-shadow: inset 0 0 5px 6px #ffffff;
+  border-radius: 2rem;
+}
+input[type='radio']:checked {
+  border: 4.5px solid black;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  accent-color: rgb(255, 255, 255);
+  /* box-shadow: inset 0 0 5px 6px rgb(157, 255, 0); */
+  box-shadow: inset 0px 0px 20px 3px #9d9aff;
+  border-radius: 2rem;
+}
+
 label {
   width: 100%;
   font-size: 1.4 rem;

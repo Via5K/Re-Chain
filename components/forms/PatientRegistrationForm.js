@@ -28,6 +28,15 @@ export default function PatientRegistrationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    msg = `Processing Request: Please wait`;
+    await setMessage(msg);
+    await setShowModal(true);
+    setTimeout(() => {
+      msg = 'Invalid Input: Please enter valid input values ⁉️  ';
+      setShowModal(false);
+      setMessage(msg);
+    }, 5000);
+
     let valid = true;
     let msg = 'Invalid Input: ';
     let data = { ...Data };
@@ -140,7 +149,7 @@ export default function PatientRegistrationForm() {
 
         <div className={styles.rowForm} onChange={setGender}>
           <label htmlFor="male">Male</label>
-          <input type="radio" id="male" name="gender" value="Male" checked />
+          <input type="radio" id="male" name="gender" value="Male" />
           <label htmlFor="female">Female</label>
           <input type="radio" id="female" name="gender" value="Female" />
         </div>
