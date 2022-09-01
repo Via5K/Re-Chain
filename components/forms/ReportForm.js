@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { validateID, validateName, validateFile } from './validations.js';
 import styles from '../../styles/Forms.module.css';
-import AddData from '../scripts/AddData.js';
+import MedicalData from '../scripts/MedicalData.js';
 import Modal from '../cards/Modal';
 import useStorage from '../hooks/useStorage';
 
@@ -27,7 +27,7 @@ export default function ReportForm() {
   const dobRef = useRef();
   const fileRef = useRef();
 
-  const { addRecord } = AddData();
+  const { addRecord } = MedicalData();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

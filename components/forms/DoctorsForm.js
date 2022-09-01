@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { validateID } from './validations.js';
 import styles from '../../styles/Forms.module.css';
-import GetData from '../scripts/GetData.js';
+import MedicalData from '../scripts/MedicalData.js';
 import DoctorsData from '../cards/DoctorsData.js';
 import Modal from '../cards/Modal';
 
@@ -21,7 +21,7 @@ export default function DoctorsForm() {
 
   // * using Custom hook to interact with Contract
   // const { connect, account, user, getDoctor } = useDoctors();
-  const { getDoctor } = GetData();
+  const { getDoctor } = MedicalData();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

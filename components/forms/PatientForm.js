@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { validateID } from './validations.js';
 import styles from '../../styles/Forms.module.css';
 import PatientData from '../cards/PatientData.js';
-import GetData from '../scripts/GetData.js';
+import MedicalData from '../scripts/MedicalData.js';
 import Modal from '../cards/Modal';
 
 export default function PatientForm() {
@@ -21,7 +21,7 @@ export default function PatientForm() {
 
   const IDRef = useRef();
 
-  const { getPatient } = GetData();
+  const { getPatient } = MedicalData();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

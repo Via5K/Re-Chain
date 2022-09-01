@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { validateID, validateName } from './validations.js';
 import styles from '../../styles/Forms.module.css';
-import AddData from '../scripts/AddData.js';
+import MedicalData from '../scripts/MedicalData.js';
 import Modal from '../cards/Modal';
 
 export default function RegistrationForm() {
@@ -15,7 +15,7 @@ export default function RegistrationForm() {
     gender: '',
   });
 
-  const { addDoctor } = AddData();
+  const { addDoctor } = MedicalData();
 
   const specialityRef = useRef();
   const doctorsNameRef = useRef();

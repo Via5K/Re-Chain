@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { validateID, validateName, validateAddress } from './validations.js';
 import styles from '../../styles/Forms.module.css';
-import AddData from '../scripts/AddData.js';
+import MedicalData from '../scripts/MedicalData.js';
 import Modal from '../cards/Modal';
 
 export default function PatientRegistrationForm() {
@@ -23,7 +23,7 @@ export default function PatientRegistrationForm() {
   const allergiesRef = useRef();
   const dobRef = useRef();
 
-  const { addPatient } = AddData();
+  const { addPatient } = MedicalData();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

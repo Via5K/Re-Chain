@@ -5,7 +5,7 @@ import Card from '../../styles/cards.module.css';
 import PatientData from '../cards/PatientData.js';
 import DoctorsData from '../cards/DoctorsData.js';
 import Report from '../cards/Report.js';
-import GetData from '../scripts/GetData.js';
+import MedicalData from '../scripts/MedicalData.js';
 import Modal from '../cards/Modal';
 
 export default function ReportDataForm() {
@@ -44,7 +44,7 @@ export default function ReportDataForm() {
 
   const IDRef = useRef();
 
-  const { getPatient, getReport, getDoctor } = GetData();
+  const { getPatient, getReport, getDoctor } = MedicalData();
 
   const getPatientData = async () => {
     // e.preventDefault();
