@@ -21,9 +21,13 @@ const Report = ({ Data }) => {
         <h3>Prescription: {Data.currentMedicalDosage}</h3>
         <h3>
           Report File:
-          {Data.pdf != '' ? (
+          {Data.pdf != '' &&
+          Data.pdf != `https://dweb.link/ipfs/` &&
+          Data.pdf.includes(`https://dweb.link/ipfs/`, 0) ? (
             <span>
-              <a href={Data.pdf}>View Report</a>
+              <a href={Data.pdf} target="_blank">
+                View Report
+              </a>
             </span>
           ) : (
             <></>
@@ -31,13 +35,19 @@ const Report = ({ Data }) => {
         </h3>
         {Reports.length > 0 ? <h3>Previous Reports:</h3> : <></>}
         {Reports.map((report) => {
-          return (
-            <>
-              <span className={styles.head}>
-                <a href={report}>View Report</a>
-              </span>
-            </>
-          );
+          if (
+            report != `https://dweb.link/ipfs/` &&
+            report.includes(`https://dweb.link/ipfs/`, 0)
+          )
+            return (
+              <>
+                <span className={styles.head}>
+                  <a href={report} target="_blank">
+                    View Report
+                  </a>
+                </span>
+              </>
+            );
         })}
       </div>
     </>

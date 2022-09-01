@@ -25,6 +25,15 @@ export default function RegistrationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    msg = `Processing Request: Please wait`;
+    await setMessage(msg);
+    await setShowModal(true);
+    setTimeout(() => {
+      msg = 'Invalid Input: Please enter valid input values ⁉️  ';
+      setShowModal(false);
+      setMessage(msg);
+    }, 5000);
+
     let valid = true;
     let msg = 'Invalid Input: Please enter valid input values ⁉️  ';
     let data = { ...Data };
