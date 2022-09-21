@@ -70,14 +70,17 @@ export default function PatientForm() {
 
     //new addition to make sure we have allergies unique
     const allergiesSet = new Set();
-    for (let i = 1; i < allergies.length; i++) {
+    //start from 11 because it gives patient ID, then allergies.
+    for (let i = 11; i < allergies.length; i++) {
       // data.allergies += allergies[i];
       allergiesSet.add(allergies[i]);
     }
+    var temp = '';
     allergiesSet.forEach((value) => {
-      data.allergies += value;
+      temp += value;
       console.log(value);
     });
+    data.allergies = temp;
     //end
     await setPatient(data);
 
