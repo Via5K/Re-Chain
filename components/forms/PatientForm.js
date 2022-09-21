@@ -69,17 +69,18 @@ export default function PatientForm() {
     }
 
     //new addition to make sure we have allergies unique
-    const allergiesSet = new Set();
+    // const allergiesSet = new Set();
+    var temp = ''; //so that if submitted more than once, it does not keeps on appending the data.
     //start from 11 because it gives patient ID, then allergies.
     for (let i = 11; i < allergies.length; i++) {
       // data.allergies += allergies[i];
-      allergiesSet.add(allergies[i]);
+      temp += allergies[i];
+      // allergiesSet.add(allergies[i]);
     }
-    var temp = '';
-    allergiesSet.forEach((value) => {
-      temp += value;
-      console.log(value);
-    });
+    // allergiesSet.forEach((value) => {
+    //   temp += value;
+    //   console.log(value);
+    // });
     data.allergies = temp;
     //end
     await setPatient(data);
