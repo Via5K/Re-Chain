@@ -91,7 +91,7 @@ export default function PatientRegistrationForm() {
     console.log(JSON.stringify(data));
 
     data.walletAddress = walletAddressRef.current.value;
-    if (data.walletAddress == '' || data.walletAddress.size != 40) {
+    if (data.walletAddress == '' || data.walletAddress.size == 42) {
       valid = false;
       msg = msg + "  Invalid Patient's Wallet Address,  ";
     }
