@@ -21,6 +21,7 @@ You can become a doctor by contacting the owner or wither contacting any other d
 After visiting the page, you will have to pass the address of the doctor Address of the Doctor that wants to be authorised.
 
 _Note:_ Only Owner/Previously Authorised Doctor can authorise the doctors.
+
 _Note:_ Only Owner can Un-authorise the doctors.
 
 ## How do i interact with this App?
