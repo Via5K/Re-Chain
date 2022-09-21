@@ -12,13 +12,16 @@ As we know medical history plays an important role and can be easily misused by 
 
 So, its simple, To View OR Add medical records of a patient, you will need to be a doctor.
 
+But being a patient, You can view you own records only.
+
 ## How to become a Doctor (Authorise/Unauthorise)
 
-You can become a doctor by contacting the owner. The URL for the AdminPanel is -> https://re-chain.vercel.app/AdminPanel/
+You can become a doctor by contacting the owner or wither contacting any other doctor who is already validated on Re-Chain to be a doctor. The URL for the AdminPanel is -> https://re-chain.vercel.app/AdminPanel/
 
 After visiting the page, you will have to pass the address of the doctor Address of the Doctor that wants to be authorised.
 
-_Note:_ Only Owner can authorise or Unauthorise the doctors.
+_Note:_ Only Owner/Previously Authorised Doctor can authorise the doctors.
+_Note:_ Only Owner can Un-authorise the doctors.
 
 ## How do i interact with this App?
 
@@ -30,7 +33,7 @@ To properly interact with this application there are certain requirements.
 4. We have done these 3 steps because the contracts are deployed on the Goerli Testnet. And it Uses Test Ether not Original Ether.
 5. Now, To do anything you will need ETH (Ether) in your wallet, SO simply copy your wallet address.
 6. [Visit](https://faucets.chain.link/goerli) and connect Your wallet and then click on send me 0.1Ether. Wait for a minute, your wallet will have 0.1 ETH. Now remember these are not the original Ether so they dont have any value.
-7. Now if you are a Doctor then only you can interact with the App, So, if oyu are a Doctor, first login with the metamask and using the IDS, You can get the details.
+7. Now if you are a Doctor/Patient then only you can interact with the App, So, if you are a Doctor, first login with the metamask and using the IDS, You can get the details.
 
 ## Where can i find Doctor/Patient IDS
 

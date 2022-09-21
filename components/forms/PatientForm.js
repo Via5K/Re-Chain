@@ -17,6 +17,7 @@ export default function PatientForm() {
     address: '',
     dob: '',
     allergies: '',
+    walletAddress: '',
   });
 
   const IDRef = useRef();
@@ -58,6 +59,7 @@ export default function PatientForm() {
     data.address = result[3];
     data.dob = result[4];
     let allergies = result[5];
+    data.walletAddress = result[6];
 
     if (data.patientsName == '' || data.patientsName == undefined) {
       msg = `No patient with id ${IDRef.current.value}`;
@@ -66,10 +68,21 @@ export default function PatientForm() {
       return;
     }
 
+    //new addition to make sure we have allergies unique
+    // const allergiesSet = new Set();
+    var temp = ''; //so that if submitted more than once, it does not keeps on appending the data.
+    //start from 11 because it gives patient ID, then allergies.
     for (let i = 11; i < allergies.length; i++) {
-      data.allergies += allergies[i];
+      // data.allergies += allergies[i];
+      temp += allergies[i];
+      // allergiesSet.add(allergies[i]);
     }
-
+    // allergiesSet.forEach((value) => {
+    //   temp += value;
+    //   console.log(value);
+    // });
+    data.allergies = temp;
+    //end
     await setPatient(data);
 
     // Success Message modal popup

@@ -1,9 +1,9 @@
 import Web3 from 'web3';
-import AddMedicalInfo from '../ABIs/AddMedicalInfo.json';
+import AddMedicalInfo from '../ABIs/MedicalInfoAddGet.json';
 import { useState, useEffect } from 'react';
 
 const AddMedicalInfoABI = AddMedicalInfo.abi;
-const contractAddress = '0xB179ab9d325DFc545CfB69fC136Ef395f60482cb'; // Goerli
+const contractAddress = '0x9dC0c0Bc3c011a2b485c43b2B0394011193A3415'; // Goerli
 // const contractAddress = '0x5FC8d32690cc91D4c39d9d3abcBD16989F875707'; // localhost
 
 const AddData = () => {
@@ -48,8 +48,10 @@ const AddData = () => {
           from: account,
         },
         (err, result) => {
-          if (err) console.log(err);
-          else if (result) console.log(result, JSON.stringify(result));
+          if (err) {
+            //show modal here displaying the error that was given by the EVM compiler
+            console.log(err);
+          } else if (result) console.log(result, JSON.stringify(result));
         }
       );
     console.log('Result', JSON.stringify(result));
@@ -74,15 +76,18 @@ const AddData = () => {
         Patient.gender,
         Patient.address,
         Patient.dob,
-        Patient.allergies
+        Patient.allergies,
+        Patient.walletAddress //this one is new
       )
       .send(
         {
           from: account,
         },
         (err, result) => {
-          if (err) console.log(err);
-          else if (result) console.log(result, JSON.stringify(result));
+          if (err) {
+            //show modal here displaying the error that was given by the EVM compiler
+            console.log(err);
+          } else if (result) console.log(result, JSON.stringify(result));
         }
       );
     console.log('Result', JSON.stringify(result));
@@ -113,8 +118,10 @@ const AddData = () => {
           from: account,
         },
         (err, result) => {
-          if (err) console.log(err);
-          else if (result) console.log(result, JSON.stringify(result));
+          if (err) {
+            //show modal here displaying the error that was given by the EVM compiler
+            console.log(err);
+          } else if (result) console.log(result, JSON.stringify(result));
         }
       );
     console.log('Result', JSON.stringify(result));

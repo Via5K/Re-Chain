@@ -3,8 +3,9 @@ const Footer = () => {
     <>
       <footer>
         <h2>
-          Developed using React JS, Next JS, Solidity smart contracts developed
-          on Ethereum blockchain and deployed on Goerli network.
+          Developed By Neeraj Nautiyal using React JS, Next JS, Solidity smart
+          contracts developed on Ethereum blockchain and deployed on Goerli
+          network.
         </h2>
       </footer>
     </>
