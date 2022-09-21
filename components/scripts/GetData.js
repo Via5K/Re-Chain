@@ -1,10 +1,10 @@
 import Web3 from 'web3';
-import GetMedicalInfo from '../ABIs/GetMedicalInfo.json';
+import GetMedicalInfo from '../ABIs/MedicalInfoAddGet.json';
 import { useState, useEffect } from 'react';
 
 const GetMedicalInfoABI = GetMedicalInfo.abi;
 // const contractAddress = '0x0165878A594ca255338adfa4d48449f69242Eb8F'; // localhost
-const contractAddress = '0x19b1970917E1Ec7D627924B65aaD0F4eac3BaD3b'; // Goerli
+const contractAddress = '0x9dC0c0Bc3c011a2b485c43b2B0394011193A3415'; // Goerli
 
 const GetData = () => {
   const [Account, setAccount] = useState('');
@@ -38,7 +38,10 @@ const GetData = () => {
         from: account,
       },
       (err, result) => {
-        if (err) console.log(err);
+        if (err) {
+          //show modal here displaying the error that was given by the EVM compiler
+          console.log(err);
+        }
         if (result) {
           console.log(
             'GetData Result: ',
@@ -71,7 +74,10 @@ const GetData = () => {
           from: account,
         },
         (err, result) => {
-          if (err) console.log(err);
+          if (err) {
+            //show modal here displaying the error that was given by the EVM compiler
+            console.log(err);
+          }
           if (result) {
             console.log(
               'GetData Result: ',
@@ -86,6 +92,7 @@ const GetData = () => {
         }
       );
     console.log(JSON.stringify(result), result);
+    //name , number, gender, address,dob,allergies
     return result;
   };
 
@@ -103,7 +110,10 @@ const GetData = () => {
         from: account,
       },
       (err, result) => {
-        if (err) console.log(err);
+        if (err) {
+          //show modal here displaying the error that was given by the EVM compiler
+          console.log(err);
+        }
         if (result) {
           console.log(
             'GetData Result: ',

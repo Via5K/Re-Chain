@@ -15,6 +15,7 @@ export default function PatientRegistrationForm() {
     allergies: '',
     gender: '',
     dob: '',
+    walletAddress: '',
   });
 
   const patientsIDRef = useRef();
@@ -22,6 +23,7 @@ export default function PatientRegistrationForm() {
   const addressRef = useRef();
   const allergiesRef = useRef();
   const dobRef = useRef();
+  const walletAddressRef = useRef();
 
   const { addPatient } = AddData();
 
@@ -87,6 +89,15 @@ export default function PatientRegistrationForm() {
     data.gender = gender;
     await setData(data);
     console.log(JSON.stringify(data));
+
+    data.walletAddress = walletAddressRef.current.value;
+    if (
+      data.walletAddress == '' ||
+      data.walletAddress != isAddress(data.walletAddress)
+    ) {
+      valid = false;
+      msg = msg + "  Invalid Patient's Wallet Address,  ";
+    }
 
     if (valid == false) {
       await setMessage(msg);
@@ -175,6 +186,18 @@ export default function PatientRegistrationForm() {
           ref={allergiesRef}
           required
         ></textarea>
+        <label htmlFor="patient-walletAddress">
+          Patient's Wallet Address:{' '}
+        </label>
+        <input
+          type="text"
+          name="patient-walletAddress"
+          id="patient-walletAddress"
+          // className="patient-name"
+          placeholder="0x087298b2F76741E2D30566A7f5138D6896aBf108"
+          ref={walletAddressRef}
+          required
+        />
         <button type="submit" className={styles.btn}>
           Submit
         </button>
