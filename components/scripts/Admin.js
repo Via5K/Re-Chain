@@ -50,6 +50,7 @@ const Admin = () => {
         function (err, resultAdd) {
           if (err) {
             //show modal here displaying the error that was given by the EVM compiler
+            alert('Not Authorised! Sorry, Ask a doctor!!');
             console.log(err);
           }
           if (resultAdd) console.log(resultAdd);
@@ -97,6 +98,7 @@ const Admin = () => {
         function (err, resultAdd) {
           if (err) {
             //show modal here displaying the error that was given by the EVM compiler
+            alert('Not Authorised! Only owner can do that!!');
             console.log(err);
           }
         }

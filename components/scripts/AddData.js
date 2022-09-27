@@ -50,6 +50,7 @@ const AddData = () => {
         (err, result) => {
           if (err) {
             //show modal here displaying the error that was given by the EVM compiler
+            alert('Not Authorised! Sorry, Become a doctor!!');
             console.log(err);
           } else if (result) console.log(result, JSON.stringify(result));
         }
@@ -86,6 +87,7 @@ const AddData = () => {
         (err, result) => {
           if (err) {
             //show modal here displaying the error that was given by the EVM compiler
+            alert('Not Authorised! Sorry, Become a doctor!!');
             console.log(err);
           } else if (result) console.log(result, JSON.stringify(result));
         }
@@ -120,6 +122,7 @@ const AddData = () => {
         (err, result) => {
           if (err) {
             //show modal here displaying the error that was given by the EVM compiler
+            alert('Not Authorised! Sorry, Become a doctor!!');
             console.log(err);
           } else if (result) console.log(result, JSON.stringify(result));
         }
