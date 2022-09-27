@@ -88,6 +88,7 @@ export default function ReportForm() {
     } else {
       const cid = await uploadFile(fileRef.current);
       data.pdf = `https://dweb.link/ipfs/${cid}`;
+      console.log(data.pdf);
     }
 
     // data.pdf = 'bafybeifynkhsnf63nsriir56zdox3fa5o62hejotpj3zzpemzztceiqauy';
