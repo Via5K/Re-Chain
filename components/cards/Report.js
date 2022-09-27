@@ -22,8 +22,11 @@ const Report = ({ Data }) => {
         <h3>
           Report File:
           {Data.pdf != '' &&
-          Data.pdf != `https://dweb.link/ipfs/` &&
-          Data.pdf.includes(`https://dweb.link/ipfs/`, 0) ? (
+          Data.pdf != `https://api.ipfsbrowser.com/ipfs/get.php?hash=` &&
+          Data.pdf.includes(
+            `https://api.ipfsbrowser.com/ipfs/get.php?hash=`,
+            0
+          ) ? (
             <span>
               <a href={Data.pdf} target="_blank">
                 View Report
@@ -36,8 +39,8 @@ const Report = ({ Data }) => {
         {Reports.length > 0 ? <h3>Previous Reports:</h3> : <></>}
         {Reports.map((report) => {
           if (
-            report != `https://dweb.link/ipfs/` &&
-            report.includes(`https://dweb.link/ipfs/`, 0)
+            report != `https://api.ipfsbrowser.com/ipfs/get.php?hash=` &&
+            report.includes(`https://api.ipfsbrowser.com/ipfs/get.php?hash=`, 0)
           )
             return (
               <>
