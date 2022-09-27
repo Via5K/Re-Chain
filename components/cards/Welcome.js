@@ -38,9 +38,9 @@ export default function Welcome() {
         >
           <Image
             loader={myLoader}
-            src="https://o.remove.bg/downloads/e21c7a5c-a4ea-43da-a4b9-102061054e95/Square-Brackets_-Curly-Brackets_-Angle-Brackets_-Oh-My-1_720x370-removebg-preview.png"
+            src="https://www.freeiconspng.com/uploads/blue-question-mark-icon-1.png"
             alt="Directions of use"
-            width={120}
+            width={90}
             height={80}
             onClick={() => setShowModal(true)}
           />

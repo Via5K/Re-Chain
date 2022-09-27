@@ -40,9 +40,9 @@ const GetData = () => {
       (err, result) => {
         if (err) {
           //show modal here displaying the error that was given by the EVM compiler
+          // alert('Not Authorised! Sorry, Become a doctor!!');
           console.log(err);
-        }
-        if (result) {
+        } else if (result) {
           console.log(
             'GetData Result: ',
             result[0],
@@ -76,9 +76,9 @@ const GetData = () => {
         (err, result) => {
           if (err) {
             //show modal here displaying the error that was given by the EVM compiler
+            alert('Not Authorised! Sorry, Become a doctor!!');
             console.log(err);
-          }
-          if (result) {
+          } else if (result) {
             console.log(
               'GetData Result: ',
               result[0],
@@ -112,9 +112,9 @@ const GetData = () => {
       (err, result) => {
         if (err) {
           //show modal here displaying the error that was given by the EVM compiler
+          // alert('Not Authorised! Sorry, Become a doctor!!');
           console.log(err);
-        }
-        if (result) {
+        } else if (result) {
           console.log(
             'GetData Result: ',
             result[0],
