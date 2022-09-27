@@ -87,7 +87,8 @@ export default function ReportForm() {
       msg = msg + '   Invalid file  |';
     } else {
       const cid = await uploadFile(fileRef.current);
-      data.pdf = `https://dweb.link/ipfs/${cid}`;
+      data.pdf = `https://api.ipfsbrowser.com/ipfs/get.php?hash=${cid}`;
+      console.log(data.pdf);
     }
 
     // data.pdf = 'bafybeifynkhsnf63nsriir56zdox3fa5o62hejotpj3zzpemzztceiqauy';

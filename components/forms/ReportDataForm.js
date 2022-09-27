@@ -119,6 +119,7 @@ export default function ReportDataForm() {
     data.updatedBy = result[2];
     data.diagnosis = result[3];
     data.pdf = result[4];
+    console.log(data.pdf);
     data.pdfAll = result[5];
     if (
       data.pdf == '' ||
