@@ -6,6 +6,22 @@ Re-chain is medical recordkeeper, based on Blockchain.
 
 [Blockchain implementation](https://github.com/Via5k/Blockchain-Based-medical-Health-Records/) It uses the security of blockchain and the ease of web to update/create/store records on blockchain.
 
+## Doctor Account Access Wallet
+
+**_NOTE_:** this wallet is a publicly shared wallet so do not put any of your personal funds in it. Also, use it only for testing purpose and authorising other accounts to be doctor. To get More testnet Goerli Eth, Use faucets.
+
+***Wallet Address:* 0x26E0C4e0DeaE504f3ea6996D81F5Bc5357AC8A88**
+
+***Private Key:* d5e0fc4036a051ea77e0f12470cd5783fc00d58a72642206df2520d7fcf33ac5**
+
+Process to Authorise a new doctor.
+* Login with the above given account in your metamask
+* Now, connect with [re-chain](re-chain.vercel.app).
+* After this, visit [Admin Panel](re-chain.vercel.app/AdminPanel). 
+* Put a new address here that you want to authorise to become a doctor & confirm the transaction.
+* All done, now you can use the account that you have just authorised as a doctor account and check the [re-chain](re-chain.vercel.app).
+
+
 ## View Medical Records
 
 As we know medical history plays an important role and can be easily misused by anyone to hurt anyone. There is a Access control mechanism which allows only Doctor & Patient to access the records.
