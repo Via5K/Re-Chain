@@ -16,8 +16,8 @@ Re-chain is medical recordkeeper, based on Blockchain.
 
 Process to Authorise a new doctor.
 * Login with the above given account in your metamask
-* Now, connect with [re-chain](re-chain.vercel.app).
-* After this, visit [Admin Panel](re-chain.vercel.app/AdminPanel). 
+* Now, connect with [re-chain](https://re-chain.vercel.app).
+* After this, visit [Admin Panel](https://re-chain.vercel.app/AdminPanel). 
 * Put a new address here that you want to authorise to become a doctor & confirm the transaction.
 * All done, now you can use the account that you have just authorised as a doctor account and check the [re-chain](re-chain.vercel.app).
 
